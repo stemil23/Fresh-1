@@ -29,7 +29,8 @@
     "tailwindcss": "npm:tailwindcss@3.4.1",
     "tailwindcss/": "npm:/tailwindcss@3.4.1/",
     "tailwindcss/plugin": "npm:/tailwindcss@3.4.1/plugin.js",
-    "$std/": "https://deno.land/std@0.216.0/"
+    "$std/": "https://deno.land/std@0.216.0/",
+    "edgedb": "https://deno.land/x/edgedb@0.30.0/"  
   },
   "compilerOptions": {
     "jsx": "react-jsx",

@@ -8,6 +8,7 @@ import * as $op from "./operators.ts";
 import _std from "./modules/std.ts";
 import _cal from "./modules/cal.ts";
 import _cfg from "./modules/cfg.ts";
+import _ext from "./modules/ext.ts";
 import _fts from "./modules/fts.ts";
 import _schema from "./modules/schema.ts";
 import _sys from "./modules/sys.ts";
@@ -21,6 +22,7 @@ const ExportDefault: typeof _std &
   "std": typeof _std;
   "cal": typeof _cal;
   "cfg": typeof _cfg;
+  "ext": typeof _ext;
   "fts": typeof _fts;
   "schema": typeof _schema;
   "sys": typeof _sys;
@@ -34,6 +36,7 @@ const ExportDefault: typeof _std &
   "std": _std,
   "cal": _cal,
   "cfg": _cfg,
+  "ext": _ext,
   "fts": _fts,
   "schema": _schema,
   "sys": _sys,

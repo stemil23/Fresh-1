@@ -1,24 +1,22 @@
-
 import { Handlers, PageProps } from "$fresh/server.ts";
 import client from "../db.ts";
+import e from "$generated/index.ts";
 
 interface Movie {
-  title: string;
+  title: string | null;
   actors: { name: string }[];
 }
 
 export const handler: Handlers<Movie[]> = {
   async GET(_, ctx) {
-    const query = `
-      SELECT Movie {
-        title,
-        actors: {
-          name
-        }
+    const query = e.select(e.Movie, () => ({
+      title: true,
+      actors: {
+        name: true
       }
-    `;
+    }));
 
-    const movies = await client.query(query) as Movie[];
+    const movies = await query.run(client);
     return ctx.render(movies);
   },
 };
